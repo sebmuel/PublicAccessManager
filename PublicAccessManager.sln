@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FEE283C-56DA-4815-A4FE-B504974626C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{DE509F9C-4875-445C-938B-E1F06F96BFB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicAccessManager.Backoffice", "PublicAccessManager.Backoffice\PublicAccessManager.Backoffice.csproj", "{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE509F9C-4875-445C-938B-E1F06F96BFB1} = {1FEE283C-56DA-4815-A4FE-B504974626C8}
+		{940EF658-33AA-48CA-B0D1-BA7AB4AA423B} = {1FEE283C-56DA-4815-A4FE-B504974626C8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE509F9C-4875-445C-938B-E1F06F96BFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE509F9C-4875-445C-938B-E1F06F96BFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE509F9C-4875-445C-938B-E1F06F96BFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE509F9C-4875-445C-938B-E1F06F96BFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

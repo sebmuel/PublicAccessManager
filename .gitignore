@@ -1,0 +1,16 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+
+# node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+.vs/
+
+global.json
