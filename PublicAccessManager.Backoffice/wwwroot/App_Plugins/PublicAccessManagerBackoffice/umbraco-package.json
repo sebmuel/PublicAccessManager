@@ -1,0 +1,14 @@
+{
+  "id": "PublicAccessManager.Backoffice",
+  "name": "PublicAccessManager.Backoffice",
+  "version": "0.0.0",
+  "allowPackageTelemetry": true,
+  "extensions": [
+    {
+      "name": "Public Access Manager Backoffice Bundle",
+      "alias": "PublicAccessManager.Backoffice.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/PublicAccessManagerBackoffice/public-access-manager-backoffice.js"
+    }
+  ]
+}
