@@ -9,7 +9,7 @@
             This action allows managing public access by defining default login and error pages.
             These pages can be configured via appsettings.json
         </Description>
-        <PackageTags>umbraco plugin package public-access</PackageTags>
+        <PackageTags>umbraco plugin package public-access umbraco-marketplace</PackageTags>
         <Version>1.0.0</Version>
         <Authors>Sebastian Müller</Authors>
         <PackageProjectUrl>https://github.com/sebmuel/PublicAccessManager</PackageProjectUrl>
