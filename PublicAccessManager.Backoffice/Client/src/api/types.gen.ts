@@ -940,6 +940,12 @@ export type FolderResponseModel = {
     id: string;
 };
 
+export type GetDefaultPagesResponse = {
+    errorPageId: string;
+    loginPageId: string;
+    recordId: string;
+};
+
 export type HealthCheckActionRequestModel = {
     healthCheck: (ReferenceByIdModel);
     alias?: (string) | null;
@@ -2133,6 +2139,11 @@ export type ServerTroubleshootingResponseModel = {
 
 export type SetAvatarRequestModel = {
     file: (ReferenceByIdModel);
+};
+
+export type SetDefaultPagesRequest = {
+    errorPageId: string;
+    loginPageId: string;
 };
 
 export type SortingRequestModel = {
@@ -3821,6 +3832,36 @@ export type GetDocumentAreReferencedError = (unknown);
 export type GetDocumentConfigurationResponse = ((DocumentConfigurationResponseModel));
 
 export type GetDocumentConfigurationError = (unknown);
+
+export type DeleteUmbracoManagementApiV1DocumentPublicAccessByIdDefaultPagesData = {
+    path: {
+        id: string;
+    };
+};
+
+export type DeleteUmbracoManagementApiV1DocumentPublicAccessByIdDefaultPagesResponse = (string);
+
+export type DeleteUmbracoManagementApiV1DocumentPublicAccessByIdDefaultPagesError = (unknown | (ProblemDetails));
+
+export type PostUmbracoManagementApiV1DocumentPublicAccessDefaultPagesData = {
+    body?: (SetDefaultPagesRequest);
+};
+
+export type PostUmbracoManagementApiV1DocumentPublicAccessDefaultPagesResponse = (string);
+
+export type PostUmbracoManagementApiV1DocumentPublicAccessDefaultPagesError = (unknown | (ProblemDetails));
+
+export type GetUmbracoManagementApiV1DocumentPublicAccessDefaultPagesResponse = ((GetDefaultPagesResponse));
+
+export type GetUmbracoManagementApiV1DocumentPublicAccessDefaultPagesError = (unknown | (ProblemDetails));
+
+export type PutUmbracoManagementApiV1DocumentPublicAccessDefaultPagesData = {
+    body?: (SetDefaultPagesRequest);
+};
+
+export type PutUmbracoManagementApiV1DocumentPublicAccessDefaultPagesResponse = (string);
+
+export type PutUmbracoManagementApiV1DocumentPublicAccessDefaultPagesError = (unknown | (ProblemDetails));
 
 export type PutDocumentSortData = {
     body?: (SortingRequestModel);

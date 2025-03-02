@@ -3851,6 +3851,26 @@ export const FolderResponseModelSchema = {
     additionalProperties: false
 } as const;
 
+export const GetDefaultPagesResponseSchema = {
+    required: ['errorPageId', 'loginPageId', 'recordId'],
+    type: 'object',
+    properties: {
+        errorPageId: {
+            type: 'string',
+            format: 'uuid'
+        },
+        loginPageId: {
+            type: 'string',
+            format: 'uuid'
+        },
+        recordId: {
+            type: 'string',
+            format: 'uuid'
+        }
+    },
+    additionalProperties: false
+} as const;
+
 export const HealthCheckActionRequestModelSchema = {
     required: ['healthCheck', 'valueRequired'],
     type: 'object',
@@ -8477,6 +8497,22 @@ export const SetAvatarRequestModelSchema = {
                     '$ref': '#/components/schemas/ReferenceByIdModel'
                 }
             ]
+        }
+    },
+    additionalProperties: false
+} as const;
+
+export const SetDefaultPagesRequestSchema = {
+    required: ['errorPageId', 'loginPageId'],
+    type: 'object',
+    properties: {
+        errorPageId: {
+            type: 'string',
+            format: 'uuid'
+        },
+        loginPageId: {
+            type: 'string',
+            format: 'uuid'
         }
     },
     additionalProperties: false
