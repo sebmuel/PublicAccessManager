@@ -4,34 +4,42 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+        <Title>DefaultPublicAccessManager</Title>
+        <Description>
+            This action allows managing public access by defining default login and error pages.
+            These pages can be configured via appsettings.json
+        </Description>
+        <PackageTags>umbraco plugin package public-access</PackageTags>
+        <Version>1.0.0</Version>
+        <Authors>Sebastian Müller</Authors>
+        <PackageProjectUrl>https://github.com/sebmuel/PublicAccessManager</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageId>DefaultPublicAccessManager</PackageId>
-        <Product>PublicAccessManager.Backoffice</Product>
-        <Title>PublicAccessManager.Backoffice</Title>
+        <Product>DefaultPublicAccessManager</Product>
+        <Title>DefaultPublicAccessManager</Title>
     </PropertyGroup>
 
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="*"/>
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="*"/>
-        <PackageReference Include="Umbraco.Cms.Api.Common" Version="*"/>
         <PackageReference Include="Umbraco.Cms.Api.Management" Version="*"/>
     </ItemGroup>
 
     <ItemGroup>
         <!-- Dont include the client folder as part of packaging nuget build -->
         <Content Remove="Client\**"/>
-        <Content Include="Client\package.json" />
-        <Content Include="Client\tsconfig.json" />
+        <Content Include="Client\package.json"/>
+        <Content Include="Client\tsconfig.json"/>
 
         <!-- However make the Umbraco-package.json included for dotnet pack or nuget package and visible to the solution -->
         <None Include="Client\public\umbraco-package.json" Pack="false"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Shared\Shared.csproj" />
+        <ProjectReference Include="..\Shared\Shared.csproj"/>
     </ItemGroup>
 
 </Project>
