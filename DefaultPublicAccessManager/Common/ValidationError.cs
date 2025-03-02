@@ -1,4 +1,6 @@
-﻿namespace Shared;
+﻿using Shared;
+
+namespace DefaultPublicAccessManager.Common;
 
 public sealed record ValidationError : Error
 {

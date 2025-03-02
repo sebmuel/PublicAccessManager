@@ -15,6 +15,7 @@
         <PackageProjectUrl>https://github.com/sebmuel/PublicAccessManager</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IsPackable>true</IsPackable>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -25,7 +26,7 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Api.Management" Version="*"/>
+        <PackageReference Include="Umbraco.Cms.Api.Management" Version="15.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -39,7 +40,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Shared\Shared.csproj"/>
+        <None Include="README.md" Pack="true" PackagePath="/"/>
     </ItemGroup>
 
 </Project>

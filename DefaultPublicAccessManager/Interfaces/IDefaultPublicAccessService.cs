@@ -1,5 +1,5 @@
-﻿using DefaultPublicAccessManager.Models.Responses;
-using Shared;
+﻿using DefaultPublicAccessManager.Common;
+using DefaultPublicAccessManager.Models.Responses;
 
 namespace DefaultPublicAccessManager.Interfaces;
 

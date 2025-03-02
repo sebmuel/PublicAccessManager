@@ -1,4 +1,6 @@
-﻿namespace Shared;
+﻿using DefaultPublicAccessManager.Common;
+
+namespace Shared;
 
 public record Error
 {

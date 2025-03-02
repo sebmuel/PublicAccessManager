@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DefaultPublicAccessManager.Common;
+using Microsoft.AspNetCore.Http;
 using Shared;
+using Result = DefaultPublicAccessManager.Common.Result;
 
 namespace DefaultPublicAccessManager.Validation;
 

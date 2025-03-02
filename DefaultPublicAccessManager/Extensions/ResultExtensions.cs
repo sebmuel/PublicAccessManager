@@ -1,4 +1,5 @@
-﻿using Shared;
+﻿using DefaultPublicAccessManager.Common;
+using Result = DefaultPublicAccessManager.Common.Result;
 
 namespace DefaultPublicAccessManager.Extensions;
 

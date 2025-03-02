@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using Shared;
 
-namespace Shared;
+namespace DefaultPublicAccessManager.Common;
 
 public class Result
 {

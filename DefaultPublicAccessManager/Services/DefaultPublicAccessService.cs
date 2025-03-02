@@ -1,9 +1,9 @@
-﻿using DefaultPublicAccessManager.Errors;
+﻿using DefaultPublicAccessManager.Common;
+using DefaultPublicAccessManager.Errors;
 using DefaultPublicAccessManager.Interfaces;
 using DefaultPublicAccessManager.Models;
 using DefaultPublicAccessManager.Models.Responses;
 using Microsoft.Extensions.Options;
-using Shared;
 
 namespace DefaultPublicAccessManager.Services;
 
