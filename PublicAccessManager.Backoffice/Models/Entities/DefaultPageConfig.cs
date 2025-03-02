@@ -32,8 +32,6 @@ public class DefaultPageConfig : Entity
 
     public static DefaultPageConfig Create(
         Guid errorPageId,
-        Guid loginPageId,
-        DateTime updatedAtUtc,
-        DateTime createdAtUtc
-    ) => new(errorPageId, loginPageId, updatedAtUtc, createdAtUtc);
+        Guid loginPageId
+    ) => new(errorPageId, loginPageId, DateTime.UtcNow, DateTime.UtcNow);
 }

@@ -1,5 +1,10 @@
-﻿using PublicAccessManager.Backoffice.Context;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
+using PublicAccessManager.Backoffice.Context;
+using PublicAccessManager.Backoffice.Interfaces;
 using PublicAccessManager.Backoffice.NotificationHandler;
+using PublicAccessManager.Backoffice.Repository;
+using PublicAccessManager.Backoffice.Services;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
@@ -17,5 +22,13 @@ public class DefaultPublicAccessComposer : IComposer
         });
 
         builder.AddNotificationAsyncHandler<UmbracoApplicationStartedNotification, MigrateTable>();
+
+
+        builder.Services.AddValidatorsFromAssembly(typeof(DefaultPublicAccessComposer).Assembly,
+            includeInternalTypes: true);
+
+        builder.Services.AddTransient<IDefaultPublicAccessService, DefaultPublicAccessService>();
+        builder.Services.AddTransient<IDefaultPageConfigRepository, DefaultPageConfigRepository>();
+        builder.Services.AddTransient<IUnitOfWork>(sp => sp.GetRequiredService<DefaultPublicAccessContext>());
     }
 }

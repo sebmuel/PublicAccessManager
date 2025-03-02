@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PublicAccessManager.Backoffice.Interfaces;
 using PublicAccessManager.Backoffice.Models.Entities;
 
 namespace PublicAccessManager.Backoffice.Context;
 
-public class DefaultPublicAccessContext : DbContext
+internal class DefaultPublicAccessContext : DbContext, IUnitOfWork
 {
     public DbSet<DefaultPageConfig> DefaultPageConfigs { get; init; }
 

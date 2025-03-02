@@ -6,7 +6,7 @@ using Umbraco.Cms.Core.Notifications;
 
 namespace PublicAccessManager.Backoffice.NotificationHandler;
 
-public class MigrateTable : INotificationAsyncHandler<UmbracoApplicationStartedNotification>
+internal class MigrateTable : INotificationAsyncHandler<UmbracoApplicationStartedNotification>
 {
     private readonly DefaultPublicAccessContext _context;
     private readonly ILogger<MigrateTable> _logger;
