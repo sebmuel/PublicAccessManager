@@ -3852,7 +3852,7 @@ export const FolderResponseModelSchema = {
 } as const;
 
 export const GetDefaultPagesResponseSchema = {
-    required: ['errorPageId', 'loginPageId', 'recordId'],
+    required: ['errorPageId', 'loginPageId'],
     type: 'object',
     properties: {
         errorPageId: {
@@ -3860,10 +3860,6 @@ export const GetDefaultPagesResponseSchema = {
             format: 'uuid'
         },
         loginPageId: {
-            type: 'string',
-            format: 'uuid'
-        },
-        recordId: {
             type: 'string',
             format: 'uuid'
         }
@@ -8497,22 +8493,6 @@ export const SetAvatarRequestModelSchema = {
                     '$ref': '#/components/schemas/ReferenceByIdModel'
                 }
             ]
-        }
-    },
-    additionalProperties: false
-} as const;
-
-export const SetDefaultPagesRequestSchema = {
-    required: ['errorPageId', 'loginPageId'],
-    type: 'object',
-    properties: {
-        errorPageId: {
-            type: 'string',
-            format: 'uuid'
-        },
-        loginPageId: {
-            type: 'string',
-            format: 'uuid'
         }
     },
     additionalProperties: false

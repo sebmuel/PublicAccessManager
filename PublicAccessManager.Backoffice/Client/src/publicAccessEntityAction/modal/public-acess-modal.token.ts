@@ -2,6 +2,8 @@
 
 export interface DefaultAccessModalData {
     unique: string;
+    errorPageId: string;
+    loginPageId: string;
 }
 
 export interface DefaultAccessModalValue {

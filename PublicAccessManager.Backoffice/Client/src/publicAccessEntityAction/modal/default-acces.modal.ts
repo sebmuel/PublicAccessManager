@@ -37,6 +37,8 @@ export class DefaultAccessModal extends UmbModalBaseElement<DefaultAccessModalDa
 
     async firstUpdated() {
         this.#unique = this.data?.unique;
+        this._loginDocumentId = this.data?.loginPageId;
+        this._errorDocumentId = this.data?.errorPageId;
         await this.#getDocumentName();
     }
 

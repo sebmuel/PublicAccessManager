@@ -18,18 +18,18 @@ export class DefaultAccessRepository extends UmbRepositoryBase {
     async create(unique: string, data: PublicAccessRequestModel) {
         if (!unique) throw new Error('unique is missing');
         if (!data) throw new Error('Data is missing');
-
-        const {error} = await DocumentService.postDocumentByIdPublicAccess({
+        const response = await DocumentService.postDocumentByIdPublicAccess({
             path: {
                 id: unique
             },
-            body: data
+            body: data,
+            parseAs: 'text'
         });
-        if (!error) {
+        if (response.response.ok) {
             const notification = {data: {message: `Public access setting created`}};
             this.#notificationContext?.peek('positive', notification);
         }
-        return {error};
+        return;
     }
 
     async read(unique: string) {
@@ -38,7 +38,7 @@ export class DefaultAccessRepository extends UmbRepositoryBase {
         const {data, error} = await DocumentService.getDocumentByIdPublicAccess({
             path: {
                 id: unique
-            }
+            },
         })
         return {data, error};
     }
@@ -47,27 +47,29 @@ export class DefaultAccessRepository extends UmbRepositoryBase {
         if (!unique) throw new Error('unique is missing');
         if (!data) throw new Error('Data is missing');
 
-        const {error} = await DocumentService.putDocumentByIdPublicAccess({
+        const response = await DocumentService.putDocumentByIdPublicAccess({
             path: {
                 id: unique
             },
-            body: data
+            body: data,
+            parseAs: "text"
         })
-        if (!error) {
+
+        if (response.response.ok) {
             const notification = {data: {message: `Public access setting updated`}};
             this.#notificationContext?.peek('positive', notification);
         }
-        return {error};
+        return;
     }
 
     async delete(unique: string) {
         if (!unique) throw new Error('unique is missing');
 
-        const {error} = await DocumentService.deleteDocumentByIdPublicAccess({path: {id: unique}})
-        if (!error) {
+        const response = await DocumentService.deleteDocumentByIdPublicAccess({path: {id: unique}, parseAs: "text"});
+        if (response.response.ok) {
             const notification = {data: {message: `Public access setting deleted`}};
             this.#notificationContext?.peek('positive', notification);
         }
-        return {error};
+        return;
     }
 }

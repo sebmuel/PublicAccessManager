@@ -24,36 +24,9 @@ public class DefaultPublicAccessController : ManagementApiControllerBase
     [HttpGet("defaultPages")]
     [ProducesResponseType(typeof(GetDefaultPagesResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
-    public async Task<IResult> GetDefaultPages(CancellationToken token)
+    public IResult GetDefaultPages()
     {
-        var result = await _accessService.GetDefaultPages(token);
+        var result = _accessService.GetDefaultPages();
         return result.Match(Results.Ok, CustomResults.Problem);
-    }
-
-    [HttpPost("defaultPages")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
-    public async Task<IResult> CreateDefaultPages(SetDefaultPagesRequest request, CancellationToken token)
-    {
-        var result = await _accessService.CreateDefaultPages(request, token);
-        return result.Match(Results.NoContent, CustomResults.Problem);
-    }
-
-    [HttpPut("defaultPages")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
-    public async Task<IResult> UpdateDefaultPages(SetDefaultPagesRequest request, CancellationToken token)
-    {
-        var result = await _accessService.UpdateDefaultPages(request, token);
-        return result.Match(Results.NoContent, CustomResults.Problem);
-    }
-
-    [HttpDelete("{id:guid}/defaultPages")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
-    public async Task<IResult> DeleteDefaultPages(Guid id, CancellationToken token)
-    {
-        var result = await _accessService.DeleteDefaultPages(id, token);
-        return result.Match(Results.NoContent, CustomResults.Problem);
     }
 }
