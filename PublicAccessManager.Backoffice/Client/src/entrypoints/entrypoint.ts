@@ -1,6 +1,5 @@
 import {UmbEntryPointOnInit} from '@umbraco-cms/backoffice/extension-api';
 import PublicAccessEntityAction from "../publicAccessEntityAction/index.ts";
-import {manifests as DefaultPublicAccessDashboard} from '../defaultPageConfig/index.ts';
 import {UMB_AUTH_CONTEXT} from '@umbraco-cms/backoffice/auth';
 import {OpenAPI} from "@umbraco-cms/backoffice/external/backend-api";
 
@@ -14,6 +13,5 @@ export const onInit: UmbEntryPointOnInit = (_host, _extensionRegistry) => {
     })
 
     _extensionRegistry.registerMany(PublicAccessEntityAction);
-    _extensionRegistry.registerMany(DefaultPublicAccessDashboard);
 };
 

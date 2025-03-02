@@ -1,20 +1,16 @@
-﻿import { UMB_CURRENT_USER_CONTEXT } from "@umbraco-cms/backoffice/current-user";
-import { UmbElementMixin } from "@umbraco-cms/backoffice/element-api";
-import {customElement, html } from "@umbraco-cms/backoffice/external/lit";
+﻿import {customElement, html} from "@umbraco-cms/backoffice/external/lit";
+import {UmbLitElement} from "@umbraco-cms/backoffice/lit-element";
 
 @customElement("default-page-config-dashboard")
-class DefaultPageConfigDashboard extends UmbElementMixin(HTMLElement){
+class DefaultPageConfigDashboard extends UmbLitElement {
 
     constructor() {
         super();
-        this.consumeContext(UMB_CURRENT_USER_CONTEXT, (context) => {
-            console.log(context.getFallbackPermissions());
-        })
     }
 
-    render(){
+    render() {
         return html`
-            <p>asd</p>
+            <div></div>
         `
     }
 
@@ -22,3 +18,9 @@ class DefaultPageConfigDashboard extends UmbElementMixin(HTMLElement){
 
 
 export default DefaultPageConfigDashboard;
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'my-welcome-default-page-config-dashboard': DefaultPageConfigDashboard;
+    }
+}
