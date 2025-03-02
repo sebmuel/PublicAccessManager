@@ -4,7 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FEE283C-56D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{DE509F9C-4875-445C-938B-E1F06F96BFB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicAccessManager.Backoffice", "PublicAccessManager.Backoffice\PublicAccessManager.Backoffice.csproj", "{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultPublicAccessManager", "DefaultPublicAccessManager\DefaultPublicAccessManager.csproj", "{940EF658-33AA-48CA-B0D1-BA7AB4AA423B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3ADA8167-E095-4DC7-B360-33BC81AF0E31}"
 EndProject

@@ -7,12 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.10.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
         <PackageReference Include="Umbraco.Cms" Version="15.2.2"/>
     </ItemGroup>
 
@@ -27,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PublicAccessManager.Backoffice\PublicAccessManager.Backoffice.csproj" />
+        <ProjectReference Include="..\DefaultPublicAccessManager\DefaultPublicAccessManager.csproj"/>
     </ItemGroup>
 
     <PropertyGroup>
