@@ -14,7 +14,7 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
         <PackageReference Include="Umbraco.Cms.Persistence.EFCore" Version="15.2.2" />
         <PackageReference Include="Umbraco.Cms.Web.Website" Version="*"/>
         <PackageReference Include="Umbraco.Cms.Web.Common" Version="*"/>
