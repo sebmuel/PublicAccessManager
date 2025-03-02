@@ -16,7 +16,6 @@ This action allows managing public access by defining default login and error pa
 
 To see and use the action, the user must have the **Default Public Access** entity permission granted.
 
-
 ### Future Enhancements
 
 - A dedicated dashboard to configure the default login and error pages per root node.
