@@ -1,12 +1,17 @@
-import {UmbEntryPointOnInit, UmbEntryPointOnUnload} from '@umbraco-cms/backoffice/extension-api';
-import {manifest as PublicAccessEntityAction} from "../publicAccessEntityAction/manifest.ts"
-import {manifest as PublicAccessEntityActionRepository} from "../publicAccessEntityAction/repository/manifest.ts"
+import {UmbEntryPointOnInit} from '@umbraco-cms/backoffice/extension-api';
+import PublicAccessEntityAction from "../publicAccessEntityAction/index.ts";
+import {UMB_AUTH_CONTEXT} from '@umbraco-cms/backoffice/auth';
+import {OpenAPI} from "@umbraco-cms/backoffice/external/backend-api";
 
-// load up the manifests here
 export const onInit: UmbEntryPointOnInit = (_host, _extensionRegistry) => {
-    _extensionRegistry.register(PublicAccessEntityAction);
-    _extensionRegistry.register(PublicAccessEntityActionRepository);
+    // setup authentication for the management api
+    _host.consumeContext(UMB_AUTH_CONTEXT, async (ctx) => {
+        const config = ctx.getOpenApiConfiguration();
+        OpenAPI.TOKEN = await config.token()
+        OpenAPI.BASE = config.base;
+        OpenAPI.CREDENTIALS = config.credentials;
+    })
+
+    _extensionRegistry.registerMany(PublicAccessEntityAction)
 };
 
-export const onUnload: UmbEntryPointOnUnload = (_host, _extensionRegistry) => {
-};

@@ -12,7 +12,7 @@ export const manifest: ManifestEntityAction = {
     forEntityTypes: [UMB_DOCUMENT_ENTITY_TYPE],
     meta: {
         icon: "icon-lock",
-        label: "#actions_protect",
+        label: "Default Public Access",
         additionalOptions: true,
     },
 };
